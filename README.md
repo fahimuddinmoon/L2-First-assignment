@@ -1,4 +1,4 @@
-<h2></h2>
+<h2>Explain the difference between any, unknown, and never types in TypeScript.</h2>
 <h5>any</h5>
 TypeScript is a type-safe language, meaning it checks and enforces the types of variables at compile time. But the any type is a special escape hatch that essentially tells TypeScript: "Don’t check this; I know what I’m doing."
 
