@@ -37,49 +37,45 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 function formatString(input, toUpper) {
     return toUpper === true ? input.toUpperCase() : input.toLowerCase();
 }
-var result = formatString("Hello", true);
-console.log(result);
-// interface bookArray {
-//     title: string;
-//     rating: number
-// }
-// function filterByRating(items: bookArray[]): bookArray[]{
-//     return items.filter(item => item.rating >= 4);
-// }
-// function concatenateArrays<T>(...infos: T[][]): T[] {
-//     return infos.reduce((first, second) => first.concat(second), []);
-// }
-// function processValue(value: string | number): number {
-//     if (typeof value === 'string') {
-//         return value.length
-//     } else{
-//         return value * 2
-//     }
-// }
-// interface Product {
-//     name: string;
-//     price: number;
-// }
-// function getMostExpensiveProduct(products: Product[]): Product | null {
-//     return products.length === 0 ? null : products.reduce((first, second) => (first.price > second.price ? first : second))
-// }
-// enum Day {
-//     Monday,
-//     Tuesday,
-//     Wednesday,
-//     Thursday,
-//     Friday,
-//     Saturday,
-//     Sunday
-// }
-// function getDayType(day: Day): string {
-//     if(day === Day.Monday || day === Day.Sunday){
-//         return "Weekend"
-//     }
-//     else{
-//       return"Weekday"  
-//     }
-// }
+function filterByRating(items) {
+    return items.filter(function (item) { return item.rating >= 4; });
+}
+function concatenateArrays() {
+    var infos = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        infos[_i] = arguments[_i];
+    }
+    return infos.reduce(function (first, second) { return first.concat(second); }, []);
+}
+function processValue(value) {
+    if (typeof value === 'string') {
+        return value.length;
+    }
+    else {
+        return value * 2;
+    }
+}
+function getMostExpensiveProduct(products) {
+    return products.length === 0 ? null : products.reduce(function (first, second) { return (first.price > second.price ? first : second); });
+}
+var Day;
+(function (Day) {
+    Day[Day["Monday"] = 0] = "Monday";
+    Day[Day["Tuesday"] = 1] = "Tuesday";
+    Day[Day["Wednesday"] = 2] = "Wednesday";
+    Day[Day["Thursday"] = 3] = "Thursday";
+    Day[Day["Friday"] = 4] = "Friday";
+    Day[Day["Saturday"] = 5] = "Saturday";
+    Day[Day["Sunday"] = 6] = "Sunday";
+})(Day || (Day = {}));
+function getDayType(day) {
+    if (day === Day.Saturday || day === Day.Sunday) {
+        return "Weekend";
+    }
+    else {
+        return "Weekday";
+    }
+}
 function squareAsync(n) {
     return __awaiter(this, void 0, void 0, function () {
         return __generator(this, function (_a) {
@@ -94,5 +90,3 @@ function squareAsync(n) {
         });
     });
 }
-squareAsync(4).then(console.log);
-squareAsync(-3).catch(console.error);
