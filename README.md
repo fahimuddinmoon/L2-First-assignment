@@ -4,13 +4,11 @@ TypeScript is a type-safe language, meaning it checks and enforces the types of 
 
 When you assign the any type to a variable, TypeScript gives up on type-checking for that variable. You can assign anything — a string, number, object, array, function — and TypeScript won’t complain. You also get full flexibility to call any method on that variable, access any property, and pass it anywhere, even if the operation makes no sense at runtime.
 
-This might sound convenient, especially when you're migrating JavaScript code to TypeScript or working with unknown third-party data, but it defeats the purpose of using TypeScript. You lose all the safety and tooling benefits — no autocomplete, no error checking, no safety net. Your code becomes as fragile and error-prone as plain JavaScript.
 <h3> Type unknown</h3>
 The unknown type is similar to any in that it can hold any type of value. However, it's much safer than any.
 
 When you declare a variable as unknown, TypeScript allows you to assign any value to it — just like any. But unlike any, you can’t use it directly. You have to narrow the type first by checking what kind of value it holds — using typeof, instanceof, or other type guards.
 
-This forces you to write safer code. For example, if you receive a value from an external API and you don't know the type yet, using unknown helps ensure that you don’t mistakenly operate on it without verifying what it is.
 <h3> Type never</h3>
 The never type is a unique and somewhat advanced concept in TypeScript. It represents a value that never happens — literally.
 
